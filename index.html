@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do list</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="antialiased py-4 bg-no-repeat bg-cover bg-center bg-fixed min-h-screen text-white bg-gray-500">
+      <div class="flex flex-col items-center min-h-screen justify-center mx-auto">
+        <div class="w-100 flex flex-col items-center mb-5 rounded-2xl backdrop-blur-[7.9px] shadow-[0_4px_30px_rgba(0,0,0,0.1)]  bg-transparent border-[1px_solid_rgba(255,255,255,0.3)]">
+        <div class="w-100 flex flex-col items-center mb-5 " >
+          <time id="" class="
+          font-maven"
+            ><span id="time" class="text-8xl font-maven mb-4">00 : 00</span> <span class="text-5xl" id="seconds"><span></time
+          >
+          <p id="date" class="mt-3 text-xl"></p>
+        </div>
+      <h3 class="mx-auto text-center text-4xl font-semibold mb-5" id="greeting">
+      </h3>
+<div class="flex w-100 wrap-break-word flex-col text-center items-center mb-5">
+      <p id="quote" class="font-medium"> </p><span id="author" class="italic  inline"></span></div>
+ </div>
+      <form class="flex" method="get" id="task-form">
+        <input
+          class="bg-gray-500 rounded-md mx-3 w-125 px-3 py-1 items-center shadow-[0_4px_30px_20px_rgba(0,0,0,0.1)] font-medium"
+          required
+          type="text"
+          id="task"
+          name="task"
+        />
+
+        <button
+          class="border border-gray-400 px-5 rounded-lg hover:scale-98 active:scale-110 font-bold"
+          type="submit"
+          id="add-task"
+        >
+          Add
+        </button>
+      </form>
+      <div id="task-container" class="flex gap-5 flex-col mt-10"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
