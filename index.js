@@ -166,10 +166,13 @@ async function getBackGround() {
 }
 const gerQuote = async () => {
     try {
-        const quoteReq = await fetch("https://api.quotable.io/random");
+        const quoteReq = await fetch("https://type.fit/api/quotes");
         const result = await quoteReq.json();
-        quoteel.textContent = result["content"];
-        authorel.textContent = ` - ${result["author"]}`;
+        let index = Math.floor(Math.random() * result.length);
+        let quote = result[index].text;
+        let author = result[index].author;
+        quoteel.textContent = quote;
+        authorel.textContent = ` - ${author}`;
     }
     catch (error) {
         return;
