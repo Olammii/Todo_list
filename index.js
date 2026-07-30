@@ -43,6 +43,7 @@ if (tasksFromStorage) {
                 return;
             const remains = JSON.parse(store).filter((item) => item.id !== id);
             localStorage.setItem('tasks', JSON.stringify(remains));
+            setTimeout(removeTask, 30000);
             const index = tasks.findIndex((item) => item.id === id);
             tasks.splice(index, 1);
             console.log(index);
@@ -62,6 +63,7 @@ function createTask(task) {
         localStorage.setItem('tasks', JSON.stringify(remains));
         const index = tasks.findIndex((item) => item.id === id);
         tasks.splice(index, 1);
+        setTimeout(removeTask, 30000);
     };
     const removeTask = () => {
         remove(id);
@@ -164,7 +166,7 @@ async function getBackGround() {
 }
 const gerQuote = async () => {
     try {
-        const quoteReq = await fetch("//api.quotable.io/random");
+        const quoteReq = await fetch("https://api.quotable.io/random");
         const result = await quoteReq.json();
         quoteel.textContent = result["content"];
         authorel.textContent = ` - ${result["author"]}`;

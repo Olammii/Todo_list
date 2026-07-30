@@ -238,7 +238,7 @@ async function getBackGround(): Promise<void> {
 
 const gerQuote = async () => {
   try {
-    const quoteReq = await fetch("http://api.quotable.io/random");
+    const quoteReq = await fetch("https://api.quotable.io/random");
     const result = await quoteReq.json();
     quoteel.textContent = result["content"];
     authorel.textContent = ` - ${result["author"]}`;
